@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    var request=new XMLHttpRequest()
+        
+        request.open('GET','https://restcountries.com/v3.1/all')
+        request.send()
+        request.onload=function(){
+            console.log("page loaded")
+            var data= JSON.parse(request.response)
+            console.log(data)
+        //a.Asian countrues 
+        var asiacon=data.filter((element)=>element.continents=="Asia")
+        console.log(asiacon)
+        //b.population lesss than 2 lakhs
+        
+        var popu=data.filter((element1)=> element1.population< 200000)
+        console.log(popu)
+        //c.print countries capital and flag using foreach()
+        data.forEach((element3) => { 
+        
+        console.log(`capital:${element3.capital}`)
+        console.log(`flag : ${element3.flag}`)
+          
+        });
+        //d.total population using reduce function
+        var totpop=data.reduce((acc,cv)=>acc+cv.population,0)
+        console.log(`total population: ${totpop}`)
+        //countries using usdollar
+        var USdoll=data.filter((element4)=>element4.currencies=="USD").map((element4)=>element4.name)
+        console.log(`US dollar counteries:${USdoll}`) 
+        
+        }
+  </script>  
+</body>
+</html>

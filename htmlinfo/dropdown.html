@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title> 
+ </head>
+<style>
+    .dropdown{
+        border:1px solid white;
+        width:70px;
+        padding:10px;
+        background-color: black;
+        color:white;
+        position:relative;
+    }
+    .dropdownlist{
+        display: none;
+       position:absolute;
+       background-color: rgb(109, 106, 106);
+       left:35px;
+       width:120px;
+       top:32px
+
+     }
+    .dropdown:hover .dropdownlist{
+        display:block;
+     }
+     .coursename{
+        padding:10px;
+        border:1px solid white;
+     }
+</style>
+<body>
+    <div class="dropdown"> COURSES
+          <div class="dropdownlist"> 
+            
+            <div class="coursename"><i class="fa-brands fa-html5"></i>HTML</div>
+            <div class="coursename"><i class="fa-brands fa-css3"></i>CSS</div>
+            <div class="coursename"><i class="fa-brands fa-square-js"></i>Javascript</div>
+            <div class="coursename"><i class="fa-brands fa-react"></i>React</div>
+            <div class="coursename">MongoDB</div>
+            <div class="coursename">node</div>
+          </div>
+    </div>
+</body>
+</html>

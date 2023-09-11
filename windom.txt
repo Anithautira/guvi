@@ -1,0 +1,2 @@
+The Browser Object Model contains objects that represent the current browser window or tab.
+ The topmost object in the BOM is the window object representing the window or tab or an iframe sometimes. Window object has properties like browser history, location and the device’s screen etc.

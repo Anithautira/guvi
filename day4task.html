@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      // b convert uppercase
+        //anonymus uppercase
+        var anonymusstr=function(str)
+          {
+            str=str.split('')
+            for (var i=0;i<str.length;i++)
+            {
+        str[i]=str[i].toUpperCase() +str[i].slice(1);
+    }      
+
+return str.join(' ')
+    }
+    console.log("the conversion is",anonymusstr('hello'))
+
+
+  //primenumbers  
+var prime=[];
+a=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+
+    var anonymusprime=function(item)
+    {  
+        var identifier=item/2
+        for (var j=2;j<=identifier;j++)
+        {
+            if((item%j)==0)
+            {return false
+            }
+        }return true
+    }
+    for (var index=0;index<a.length;index++)
+    {
+    if(anonymusprime(a[index]))
+    {
+        prime.push(a[index])
+
+    }
+}
+        
+        console.log(prime)
+
+        //palindrome:
+        function ispalindrome(N)
+        {
+            let str=" "+ N
+            let len=str.length
+            for (var i=0;i<parseint(len/2);i++)
+            {
+                if (str[i]!=str[len-1-i])
+            return false;
+        }
+        }
+        var anonymuspalindrome=function(str,n)
+        {for(i=0;i<n;i++)
+        {
+            let ans=ispalindrome(arr[i]);
+            if(ans==false)
+            return false;
+
+        }
+    return true
+}
+
+function reverse(array,li,ri)
+{
+ while(li,ri)
+ {
+    var temp=a[i]
+    a[li]=a[ri]
+    a[ri]=temp
+    li++
+    ri--
+ }
+  }  
+  var anonymusreverse=function(array,k)
+  {
+    k=k%a.length
+    if(k<0)
+    {
+        k+=a.length
+    }
+        reverse(a,0,a.length-k-1)
+        reverse(a,a.length-k,a.length-1)
+        reverse(a,0,a.length-1)
+    }
+  
+
+
+
+   
+
+ 
+   
+
+   
+ 
+
+    </script>
+    
+</body>
+</html>

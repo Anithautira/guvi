@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let basefee=50
+    var price;
+    //let places=["T.nagar","OMR","Koyambedu","ECR"]
+   //let rates=["30","60","40","50"]
+    class uberrate
+    {
+        constructor(city,price)
+        {
+            this.city=city
+            this.price=price
+            console.log("price",this.price)
+          
+        }
+       getcustomercity(arr)
+        {
+            console.log("array",arr)
+           
+    for(var i=0;i<arr.length;i++)
+{
+    console.log("array inside for",arr)
+    
+    if(arr[i]=="Tnagar")
+    {
+        console.log(arr[i])
+     price=basefee*10
+     console.log(price)
+    
+    
+}
+else if(arr[i]=="OMR") 
+{
+      
+ price=basefee*30
+console.log(price)
+
+}
+else if(arr[i]=="ECR") 
+{
+     price=basefee*20
+    
+    }
+ else{  price=basefee*15
+    
+}
+}
+        }
+       
+    }
+
+
+
+  let city1=new uberrate("Tnagar") 
+  let city2=new uberrate("OMR") 
+  let city3=new uberrate("ECR") 
+  let city4=new uberrate("Koyambedu") 
+  var arrc=[city1,city2,city3,city4]
+  
+   city1.getcustomercity(arrc)
+   city2.getcustomercity(arrc)
+   city3.getcustomercity(arrc)
+   city4.getcustomercity(arrc)
+   console.log(city1.price)
+   console.log(city2.price)
+   console.log(city3.price)
+   console.log(city4.price)
+
+
+
+
+       
+ 
+
+
+    
+
+
+        
+    
+</script>
+
+</body>
+</html>
